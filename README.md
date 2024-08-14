@@ -4,7 +4,7 @@ This project demonstrates how to use AWS CDK to create a Lambda function that in
 
 ## Prerequisites
 
-- Node.js
+- Node.js 
 - AWS CLI configured with appropriate credentials
 - AWS CDK CLI installed (`npm install -g aws-cdk`)
 
@@ -21,13 +21,9 @@ This project demonstrates how to use AWS CDK to create a Lambda function that in
    ```
    npm install
    ```
-3. Build the project:
+3. Deploy the stack:
    ```
-   npm run build
-   ```
-4. Deploy the stack:
-   ```
-   npm run deploy
+   cdk deploy
    ```
 
 ## Testing the Lambda Function
@@ -39,7 +35,7 @@ After deployment, you can test the Lambda function using the AWS Console or AWS 
 To avoid incurring future charges, remember to destroy the resources when you're done:
 
 ```
-npm run destroy
+cdk destroy
 ```
 
 ## Security
