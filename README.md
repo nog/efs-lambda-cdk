@@ -1,14 +1,47 @@
-# Welcome to your CDK TypeScript project
+# EFS Lambda CDK Sample
 
-This is a blank project for CDK development with TypeScript.
+This project demonstrates how to use AWS CDK to create a Lambda function that interacts with an Amazon EFS file system to implement a simple counter application.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Prerequisites
 
-## Useful commands
+- Node.js
+- AWS CLI configured with appropriate credentials
+- AWS CDK CLI installed (`npm install -g aws-cdk`)
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+## Project Structure
+
+- `lib/efs-lambda-cdk-stack.ts`: Contains the CDK stack definition
+- `lambda/index.rb`: Contains the Lambda function code
+- `bin/efs-lambda-cdk.ts`: CDK app entry point
+
+## Setup and Deployment
+
+1. Clone this repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Build the project:
+   ```
+   npm run build
+   ```
+4. Deploy the stack:
+   ```
+   npm run deploy
+   ```
+
+## Testing the Lambda Function
+
+After deployment, you can test the Lambda function using the AWS Console or AWS CLI.
+
+## Cleaning Up
+
+To avoid incurring future charges, remember to destroy the resources when you're done:
+
+```
+npm run destroy
+```
+
+## Security
+
+This project uses default security group rules. For production use, please review and tighten security rules as needed.
